@@ -1,7 +1,15 @@
 <template>
   <li class="tasks-item">
-    <input type="checkbox" @change="$emit('complete')" :checked="task.completed" :id="'task-' + task.id" name="check" />
-    <label :for="'task-' + task.id">{{task.title}}</label>
+    <input
+      type="checkbox"
+      @change="$emit('complete')"
+      :checked="task.completed"
+      :id="'task-' + task.id"
+      name="check"
+    />
+    <label :for="'task-' + task.id">
+      {{task.title}}
+    </label>
   </li>
 </template>
 

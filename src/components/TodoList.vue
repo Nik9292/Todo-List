@@ -8,11 +8,16 @@
         <button>Add</button>
       </div>
       <div>
-        <transition-group name="fade" tag="ul" class="tasks">
-          <task-item v-for="task in tasks"
-                     @complete="completeTask(task)"
-                     :task="task"
-                     :key="task.id"></task-item>
+        <transition-group
+          name="fade"
+          tag="ul"
+          class="tasks"
+        >
+          <task-item
+            v-for="task in tasks"
+            @complete="completeTask(task)"
+            :task="task"
+            :key="task.id"></task-item>
         </transition-group>
       </div>
     </div>
@@ -91,11 +96,12 @@ export default {
       .header {
         display: flex;
         justify-content: space-between;
-        margin-bottom: 30px;
+        margin-bottom: 40px;
         h1 {
           margin: 0;
           font-weight: bold;
           color: #fff;
+          font-size: 28px;
         }
         button {
           background: #FF8469;
@@ -103,7 +109,7 @@ export default {
           border: none;
           outline: none;
           color: #fff;
-          padding: 5px 10px;
+          padding: 5px 7px;
           border-radius: 7px;
           cursor: pointer;
           text-transform: uppercase;
@@ -111,7 +117,7 @@ export default {
       }
       .tasks-item {
         display: flex;
-        margin-bottom: 18px;
+        margin-bottom: 30px;
       }
     }
   }
